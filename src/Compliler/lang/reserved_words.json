@@ -1,0 +1,16 @@
+{
+    "=": "allocation",
+    "==": "equals",
+    "*": "multiply",
+    "-": "subtract",
+    "{": "start_scope",
+    "}": "end_scope",
+    "vr": "variable",
+    "func": "function",
+    "in": "inside_values",
+    "to": "loop",
+    "return": "return",
+    "msg": "print",
+    "case": "if_condition",
+    "casen": "else_condition"
+}

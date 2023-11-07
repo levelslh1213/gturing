@@ -1,0 +1,22 @@
+func CalculateEx (a) {
+    return a * 2 - 1
+}
+
+vr myArray = [1,2,3,4,5];
+
+vr index = 0;
+vr finalIndex = 5;
+to (value in myArray) {
+    msg(CalculateEx(value));
+    index++;
+}
+
+vr indexResult = index - finalIndex
+
+case (indexResult == 0) {
+    msg("Esta correto")
+}
+
+msg("index:")
+msg("luizao eh gay")
+msg(index)

@@ -1,0 +1,22 @@
+CBUM CalculateEx (a) {
+    LEVRONE a * 2 SUB 1
+}
+
+ARNOLD myArray REMADA [1,2,3,4,5];
+
+ARNOLD index REMADA 0;
+ARNOLD finalIndex REMADA 5;
+SERIES (value in myArray) {
+    DINO(CalculateEx(value));
+    index++;
+}
+
+ARNOLD indexResult REMADA index SUB finalIndex
+
+RONNIE (indexResult TESTO 0) {
+    DINO("Esta correto")
+}
+
+DINO("index:")
+DINO("luizao eh gay")
+DINO(index)

@@ -1,0 +1,21 @@
+ARNOLD quantity REMADA 4; ARNOLD quantityy REMADA 6;
+
+quantity++;
+DINO(quantity)
+DINO(quantityy)
+ARNOLD finalQ REMADA quantity * 2;
+DINO(finalQ)
+quantity REMADA finalQ + quantity;
+DINO(quantity)
+RONNIE (finalQ == quantity) {
+    DINO("Is Equals")
+} COLEMAN {
+    DINO("Is diff")
+}
+
+RONNIE (4 == 4) {
+    DINO("Is Equals")
+}
+
+finalQ REMADA quantity - 4;
+DINO(quantity)

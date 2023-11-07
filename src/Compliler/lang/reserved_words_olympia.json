@@ -1,0 +1,16 @@
+{
+    "REMADA": "allocation",
+    "TESTO": "equals",
+    "*": "multiply",
+    "SUB": "subtract",
+    "{": "start_scope",
+    "}": "end_scope",
+    "ARNOLD": "variable",
+    "CBUM": "function",
+    "in": "inside_values",
+    "SERIES": "loop",
+    "LEVRONE": "return",
+    "DINO": "print",
+    "RONNIE": "if_condition",
+    "COLEMAN": "else_condition"
+}

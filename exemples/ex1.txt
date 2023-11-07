@@ -1,0 +1,21 @@
+vr quantity = 4; vr quantityy = 6;
+
+quantity++;
+msg(quantity)
+msg(quantityy)
+vr finalQ = quantity * 2;
+msg(finalQ)
+quantity = finalQ + quantity;
+msg(quantity)
+case (finalQ == quantity) {
+    msg("Is Equals")
+} casen {
+    msg("Is diff")
+}
+
+case (4 == 4) {
+    msg("Is Equals")
+}
+
+finalQ = quantity - 4;
+msg(quantity)
