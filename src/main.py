@@ -7,7 +7,7 @@ with open('src/Compliler/lang/' + langName + '.json', 'r') as jsonFile:
         langStyle = json.load(jsonFile)
 
 Compliler.Log.Info('Reading file...')
-expressions = Compliler.CRead('exemples/ex1.txt')
+expressions = Compliler.CRead('exemples/ex3.txt')
 Compliler.Log.Info('File readed!')
 
 Compliler.Log.Info('Validating expressions...')

@@ -1,0 +1,10 @@
+vr numero = 1; vr numeroo = 2;
+
+vr soma = numero + numeroo;
+msg(soma)
+vr sub = numero - numeroo;
+msg(sub)
+vr mult = numero * numeroo;
+msg(mult)
+vr div = numero / numeroo;
+msg(div)
