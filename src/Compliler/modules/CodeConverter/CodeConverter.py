@@ -12,12 +12,19 @@ def CodeConverter (expressionList, langStyle):
 
     identity = 0
     for x in expressionList:
+        for k in reservedWords:
+            if x == reservedWords[k] and k not in ['start_scope', 'end_scope']:
+                print(f'expression: {x}')
+                print('Invalid expression!')
+                exit()
         exp = x
         exp = exp.replace(reservedWords["return"], 'return')
         exp = exp.replace(reservedWords["equals"], '==')
         exp = exp.replace(reservedWords["allocation"], '=')
         exp = exp.replace(reservedWords["subtract"], '-')
+        exp = exp.replace(reservedWords["addition"], '+')
         exp = exp.replace(reservedWords["multiply"], '*')
+        exp = exp.replace(reservedWords["division"], '/')
         exp = exp.replace(reservedWords["print"] + '(', 'print(')
         exp = exp.replace(reservedWords["variable"] + ' ', '')
         exp = exp.replace('++', ' += 1')

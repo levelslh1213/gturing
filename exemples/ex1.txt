@@ -5,6 +5,9 @@ msg(quantity)
 msg(quantityy)
 vr finalQ = quantity * 2;
 msg(finalQ)
+vr finalQQ = quantity / 2;
+msg("finalQQ:")
+msg(finalQQ)
 quantity = finalQ + quantity;
 msg(quantity)
 case (finalQ == quantity) {
