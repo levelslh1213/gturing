@@ -3,8 +3,8 @@ def CodeReader (filePath):
     codeLines = None
     with open(f'{filePath}', 'r') as codeFile: 
         codeLines = codeFile.readlines()
-
-    if codeLines == None: 
+    print(str(codeLines))
+    if codeLines == None or len(codeLines) == 0: 
         print('No code found!')
         exit()
 
