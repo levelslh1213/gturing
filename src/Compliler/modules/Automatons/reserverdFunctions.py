@@ -33,6 +33,7 @@ class ReservedFunctionsAutomaton(GenericAutomaton):
             tm.WriteAndMove(value, +1)
             return self.__Q5(tm)
         else:
+            self.__failMessage('Not a valid function element!')
             return self.__QDead()
         
         # return self.__Q3(tm)
@@ -45,6 +46,7 @@ class ReservedFunctionsAutomaton(GenericAutomaton):
             tm.WriteAndMove(value, +1)
             return self.__Q2(tm)
         else :
+            self.__failMessage('Not a valid manipulable element! Element: ' + str(value))
             return self.__QDead()
         
     @GenericAutomaton.statefunction
@@ -58,6 +60,7 @@ class ReservedFunctionsAutomaton(GenericAutomaton):
             tm.WriteAndMove(value, +1)
             return self.__Q6(tm)
         else: 
+            self.__failMessage('Not a valid operation at:' + str(value))
             return self.__QDead()
 
     @GenericAutomaton.finalstatefunction
@@ -68,6 +71,7 @@ class ReservedFunctionsAutomaton(GenericAutomaton):
             tm.WriteAndMove(value, +1)
             return self.__Q4(tm)
         else: 
+            self.__failMessage('Not a valid manipulable element! Element: ' + str(value))
             return self.__QDead()
         
     @GenericAutomaton.finalstatefunction
@@ -81,6 +85,7 @@ class ReservedFunctionsAutomaton(GenericAutomaton):
             tm.WriteAndMove(value, +1)
             return self.__Q6(tm)
         else: 
+            self.__failMessage('Not a valid manipulable element! Element: ' + str(value))
             return self.__QDead()
         
     @GenericAutomaton.finalstatefunction
@@ -97,4 +102,5 @@ class ReservedFunctionsAutomaton(GenericAutomaton):
             tm.WriteAndMove(value, +1)
             return self.__Q4(tm)
         else: 
+            self.__failMessage('Not a valid manipulable element!' + str(value))
             return self.__QDead()
