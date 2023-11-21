@@ -82,5 +82,8 @@ class ExpressionsAutomaton(GenericAutomaton):
         if value == '<subtract>' or value == '<addition>' or value == '<division>' or value == '<multiply>' or value == '<inside_values>':
             tm.WriteAndMove(value, +1)
             return self.__Q3(tm)
-        else:
+        elif value == '<variable_name>' or value == '<number>' or value == '<array_declaration>':
+            self.__failMessage = 'Can not set an manipulable element next to the other! ' + str(value)
             return self.__QDead()
+        else:
+            return 'success'

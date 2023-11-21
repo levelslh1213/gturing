@@ -18,5 +18,4 @@ case (indexResult == 0) {
 }
 
 msg("index:")
-msg("luizao eh gay")
 msg(index)
