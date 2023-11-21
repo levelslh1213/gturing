@@ -10,7 +10,7 @@ from .modules.Automatons.functions import FunctionsAutomaton
 from .modules.Automatons.reserverdFunctions import ReservedFunctionsAutomaton
 
 def ValidadeExpression(TExpression, SExpression):
-    # print(TExpression)
+    print(TExpression)
     # print(SExpression)
     isValid = True
     for token in TExpression:
@@ -20,7 +20,6 @@ def ValidadeExpression(TExpression, SExpression):
             break
     
     tMachine = TuringMachine()
-    # tMachine.automatons['OrderRecognize'] = HotelOrderRecognizeAutomaton()
     tMachine.automatons['Function'] = FunctionsAutomaton()
     tMachine.automatons['Expression'] = ExpressionsAutomaton()
     tMachine.automatons['ReservedFunctions'] = ReservedFunctionsAutomaton()
@@ -39,7 +38,7 @@ def ValidadeExpression(TExpression, SExpression):
         for x in validations:
             if x['result'] == False:
                 Log.Error('Exception:  ' + x['message'])
-    # print('teste de validação: ' + str(validations))
+    print('teste de validação: ' + str(validations))
 
     return isValid
 

@@ -33,7 +33,7 @@ class FunctionsAutomaton(GenericAutomaton):
             tm.WriteAndMove(value, +1)
             return self.__Q3(tm)
         else:
-            self.__failMessage('Not a valid manipulable element! Element: ' + str(value))
+            self.__failMessage = 'Not a valid manipulable element! Element: ' + str(value)
             return self.__QDead()
         
         # return self.__Q3(tm)
@@ -46,7 +46,7 @@ class FunctionsAutomaton(GenericAutomaton):
             tm.WriteAndMove(value, +1)
             return self.__Q2(tm)
         else :
-            self.__failMessage('Error while declaring function')
+            self.__failMessage = 'Error while declaring function'
             return self.__QDead()
         
     @GenericAutomaton.statefunction
@@ -60,7 +60,7 @@ class FunctionsAutomaton(GenericAutomaton):
             tm.WriteAndMove(value, +1)
             return self.__Q3(tm)
         else: 
-            self.__failMessage('Not a valid manipulable element! Element: ' + str(value))
+            self.__failMessage = 'Not a valid manipulable element! Element: ' + str(value)
             return self.__QDead()
 
     @GenericAutomaton.finalstatefunction
@@ -75,7 +75,7 @@ class FunctionsAutomaton(GenericAutomaton):
             tm.WriteAndMove(value, +1)
             return self.__Q5(tm)
         else: 
-            self.__failMessage('Not a valid manipulable element! Element: ' + str(value))
+            self.__failMessage = 'Not a valid manipulable element! Element: ' + str(value)
             return self.__QDead()
         
     @GenericAutomaton.finalstatefunction
@@ -86,5 +86,5 @@ class FunctionsAutomaton(GenericAutomaton):
             tm.WriteAndMove(value, +1)
             return self.__Q4(tm)
         else:
-            self.__failMessage('Not a valid operation at:' + str(value))
+            self.__failMessage = 'Not a valid operation at:' + str(value)
             return 'success'

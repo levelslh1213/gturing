@@ -30,7 +30,7 @@ class ExpressionsAutomaton(GenericAutomaton):
             tm.WriteAndMove(value, +1)
             return self.__Q2(tm)
         else:
-            self.__failMessage('Can not start an expression with terminal values!')
+            self.__failMessage = 'Can not start an expression with terminal values!'
             return self.__QDead()
         
     @GenericAutomaton.statefunction
@@ -41,7 +41,7 @@ class ExpressionsAutomaton(GenericAutomaton):
             tm.WriteAndMove(value, +1)
             return self.__Q2(tm)
         else :
-            self.__failMessage('Not a valid variable element! Element: ' + str(value))
+            self.__failMessage = 'Not a valid variable element! Element: ' + str(value)
             return self.__QDead()
         
     @GenericAutomaton.statefunction
@@ -55,7 +55,7 @@ class ExpressionsAutomaton(GenericAutomaton):
             tm.WriteAndMove(value, +1)
             return self.__Q4(tm)
         else: 
-            self.__failMessage('Not a valid operation at:' + str(value))
+            self.__failMessage = 'Not a valid operation at:' + str(value)
             return self.__QDead()
 
     @GenericAutomaton.statefunction
@@ -72,7 +72,7 @@ class ExpressionsAutomaton(GenericAutomaton):
             tm.WriteAndMove(value, +1)
             return self.__Q4(tm)
         else: 
-            self.__failMessage('Not a valid manipulable element! Element: ' + str(value))
+            self.__failMessage = 'Not a valid manipulable element! Element: ' + str(value)
             return self.__QDead()
         
     @GenericAutomaton.finalstatefunction
@@ -83,4 +83,4 @@ class ExpressionsAutomaton(GenericAutomaton):
             tm.WriteAndMove(value, +1)
             return self.__Q3(tm)
         else:
-            return 'success'
+            return self.__QDead()
